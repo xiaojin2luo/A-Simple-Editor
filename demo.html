@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>编辑器学习</title>
+  <script src="./editer.js"></script>
+  <link rel="stylesheet" href="./editer.css">
+  <style>
+    .editer-container {
+      width: 60%;
+      min-height: 350px;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="container">
+    <h1>编辑器DEMO</h1>
+    <h2>简单演示</h2>
+    <section class="editer-container" id="editer-container">
+      <!-- 编辑器 -->
+    </section>
+  </section>
+  <hr>
+  <span>操作按钮</span>
+  <button id="getContent">获取剪辑器内容</button>
+</body>
+<script>
+  //初始化
+  window.onload = function() {
+    let editerContainer = document.getElementById("editer-container");
+    var editer = init(editerContainer);
+  }
+  document.getElementById("getContent").onclick = function() {
+    alert(editer.innerHTML);
+  }
+</script>
+
+</html>
